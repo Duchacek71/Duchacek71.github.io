@@ -66,6 +66,50 @@ a {
     gap: 32px;
 }
 
+.nav-pill {
+    width: 130px;
+
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 999px;
+
+    background: rgba(102, 80, 181, 0.10);
+    border: 1px solid rgba(102, 80, 181, 0.14);
+
+    color: var(--violet-dark);
+
+    text-decoration: none;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    transition: all .2s ease;
+}
+
+.nav-pill:hover {
+    background: rgba(102, 80, 181, 0.16);
+}
+
+.nav-pill-primary {
+    background: linear-gradient(
+        135deg,
+        var(--violet),
+        var(--violet-dark)
+    );
+
+    color: white !important;
+
+    box-shadow: 0 12px 28px rgba(78,57,166,0.22);
+}
+
 .brand {
     text-decoration: none;
     display: grid;
@@ -76,7 +120,7 @@ a {
 .footer-brand {
     font-family: var(--heading-font);
     font-style: italic;
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
     line-height: 1;
     color: var(--violet-dark);
 }
@@ -85,18 +129,14 @@ a {
     color: var(--violet);
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    font-size: 0.82rem;
+    font-size: 0.72rem;
     line-height: 1.35;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 26px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    gap: 12px;
 }
 
 .main-nav a {
@@ -111,6 +151,7 @@ a {
     border-radius: 999px;
     padding: 12px 22px;
     box-shadow: 0 12px 28px rgba(78, 57, 166, 0.22);
+    min-width: 190px;
 }
 
 /* Watercolor backgrounds */
@@ -180,7 +221,7 @@ a {
 .hero-grid {
     display: grid;
     grid-template-columns: 0.95fr 1.05fr;
-    align-items: end;
+    align-items: center;
     gap: 56px;
 }
 
@@ -228,7 +269,18 @@ a {
 }
 
 .btn.secondary {
+    background: rgba(102, 80, 181, 0.10);
+    border: 1px solid rgba(102, 80, 181, 0.14);
     color: var(--violet-dark);
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(42, 33, 105, 0.08);
+    min-width: 190px;
+}
+
+.btn.secondary:hover {
+    background: rgba(102, 80, 181, 0.16);
+    transform: translateY(-1px);
+    min-width: 190px;
 }
 
 /* Hero photo with transparent PNG */
