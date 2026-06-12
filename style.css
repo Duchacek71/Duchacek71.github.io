@@ -303,33 +303,41 @@ a {
 
 .service-card {
     min-height: 420px;
-    padding: 38px;
+    padding: 30px;
     border-radius: var(--radius);
     background: rgba(255,255,255,0.72);
     border: 1px solid rgba(102, 80, 181, 0.14);
     box-shadow: var(--shadow);
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     position: relative;
+    min-width: 0;
 }
 
 .service-card h2 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2rem, 3.2vw, 3rem);
-    line-height: 1.1;
+    font-size: clamp(1.7rem, 2.1vw, 2.25rem);
+    line-height: 1.12;
     margin: 0 0 16px;
     color: var(--violet-dark);
-}
-
-.blue-card h2 {
-    color: #315fbb;
+    overflow-wrap: break-word;
 }
 
 .service-card p,
 .service-card li {
     color: var(--muted);
+    overflow-wrap: break-word;
+}
+
+.service-copy {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+}
+
+.blue-card h2 {
+    color: #315fbb;
 }
 
 .service-card ul {
