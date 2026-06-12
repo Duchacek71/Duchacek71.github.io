@@ -351,99 +351,34 @@ a {
     font-weight: 900;
 }
 
-.service-art {
-    align-self: stretch;
-    min-height: 260px;
-    border-radius: 45% 55% 48% 52%;
-    background: radial-gradient(circle at 48% 48%, rgba(173, 150, 233, 0.38), transparent 62%);
-    position: relative;
-}
-
-.service-art::before {
-    content: "";
-    position: absolute;
-    inset: 16px;
-    opacity: 0.55;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.service-art {
-    position: relative;
-    min-height: 220px;
+.service-icon-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    margin-bottom: 1.5rem;
     border-radius: 28px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.45);
+    background:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.25)),
+        rgba(214, 194, 178, 0.25);
 }
 
-/* Kraniosakrální terapie — jemné vlny */
-.cranio-art::before,
-.cranio-art::after {
-    content: "";
-    position: absolute;
-    border: 2px solid rgba(137, 111, 92, 0.22);
-    border-radius: 50%;
-    inset: 42px;
+.service-icon-card img {
+    width: 96px;
+    height: 96px;
+    opacity: 0.62;
 }
 
-.cranio-art::after {
-    inset: 72px;
-    border-color: rgba(137, 111, 92, 0.14);
-}
+@media (max-width: 700px) {
+    .service-icon-card {
+        min-height: 130px;
+        margin-bottom: 1rem;
+    }
 
-/* Porodní asistence — ochranný oblouk */
-.birth-art::before {
-    content: "";
-    position: absolute;
-    width: 130px;
-    height: 170px;
-    border: 2px solid rgba(137, 111, 92, 0.24);
-    border-radius: 80px 80px 50px 50px;
-    left: 50%;
-    top: 28px;
-    transform: translateX(-50%);
-}
-
-.birth-art::after {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border: 2px solid rgba(137, 111, 92, 0.16);
-    border-radius: 50%;
-    left: 50%;
-    top: 86px;
-    transform: translateX(-50%);
-}
-
-/* Práce s jizvami — jemná organická linie */
-.scar-art::before {
-    content: "";
-    position: absolute;
-    width: 170px;
-    height: 90px;
-    left: 50%;
-    top: 62px;
-    transform: translateX(-50%) rotate(-8deg);
-    border-top: 2px solid rgba(137, 111, 92, 0.26);
-    border-radius: 50%;
-}
-
-.scar-art::after {
-    content: "";
-    position: absolute;
-    width: 110px;
-    height: 2px;
-    left: 50%;
-    top: 130px;
-    transform: translateX(-50%);
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(137, 111, 92, 0.22),
-        transparent
-    );
+    .service-icon-card img {
+        width: 72px;
+        height: 72px;
+    }
 }
 
 .kontakt {
