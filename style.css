@@ -203,20 +203,54 @@ a {
 }
 
 .hero-photo {
+    position: relative;
     justify-self: center;
-    width: min(520px, 100%);
+    width: min(500px, 100%);
     align-self: stretch;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    padding: 18px;
+    border-radius: 42px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(255,255,255,0.82), rgba(238,232,255,0.45) 48%, rgba(255,250,253,0) 72%),
+        linear-gradient(145deg, rgba(238,232,255,0.62), rgba(255,255,255,0.28));
+    box-shadow: 0 28px 70px rgba(42, 33, 105, 0.14);
+}
+
+.hero-photo::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: 34px;
+    border: 1px solid rgba(102, 80, 181, 0.12);
+    pointer-events: none;
+}
+
+.hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: auto -40px -70px -40px;
+    height: 170px;
+    background: linear-gradient(
+        180deg,
+        rgba(255,250,253,0),
+        rgba(255,250,253,0.92) 72%,
+        var(--paper)
+    );
+    pointer-events: none;
 }
 
 .hero-photo img {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    max-height: 590px;
+    max-height: 570px;
     object-fit: contain;
     object-position: bottom center;
-    filter: drop-shadow(0 22px 35px rgba(48, 33, 97, 0.16));
+    border-radius: 32px;
+    filter: drop-shadow(0 20px 30px rgba(48, 33, 97, 0.16));
 }
 
 .features {
