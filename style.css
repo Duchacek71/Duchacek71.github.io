@@ -110,6 +110,23 @@ a {
     box-shadow: 0 12px 28px rgba(78,57,166,0.22);
 }
 
+.nav-pill-primary:hover {
+    background: linear-gradient(
+        135deg,
+        var(--violet),
+        var(--violet-dark)
+    );
+
+    color: white !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 18px 36px rgba(78,57,166,0.30);
+
+    filter: brightness(1.5);
+}
+
 .brand {
     text-decoration: none;
     display: grid;
@@ -152,6 +169,18 @@ a {
     padding: 12px 22px;
     box-shadow: 0 12px 28px rgba(78, 57, 166, 0.22);
     min-width: 190px;
+}
+
+.btn.primary:hover {
+    background: linear-gradient(
+        135deg,
+        var(--violet),
+        var(--violet-dark)
+    );
+    color: white !important;
+    transform: translateY(-1px);
+    filter: brightness(1.5);
+
 }
 
 /* Watercolor backgrounds */
