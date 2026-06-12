@@ -369,16 +369,81 @@ a {
     background-size: contain;
 }
 
-.woman-art::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='180' height='240' viewBox='0 0 180 240' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M82 35c-28 8-40 38-25 64 10 17 28 22 45 28 18 7 35 20 37 44' stroke='%236650B5' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M84 50c25 4 40 27 35 50-3 16-14 26-27 33' stroke='%236650B5' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M75 94c8 8 22 9 32 2' stroke='%236650B5' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M36 204c20-42 49-64 86-76' stroke='%236650B5' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M57 184c-19-18-24-39-17-63 22 11 33 30 31 55' stroke='%236650B5' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M106 146c17-20 36-31 58-34-3 28-20 45-49 51' stroke='%236650B5' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+.service-art {
+    position: relative;
+    min-height: 220px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.45);
 }
 
-.mother-art {
-    background: radial-gradient(circle at 55% 58%, rgba(82, 127, 198, 0.34), transparent 62%);
+/* Kraniosakrální terapie — jemné vlny */
+.cranio-art::before,
+.cranio-art::after {
+    content: "";
+    position: absolute;
+    border: 2px solid rgba(137, 111, 92, 0.22);
+    border-radius: 50%;
+    inset: 42px;
 }
 
-.mother-art::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='190' height='240' viewBox='0 0 190 240' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M96 28c33 4 59 29 61 63 2 34-20 58-47 75' stroke='%23527FC6' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M95 46c-22 7-36 26-38 48-4 37 21 65 56 86' stroke='%23527FC6' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M75 139c14-22 45-26 61-5 14 19 2 50-27 49-26-1-47-20-34-44Z' stroke='%23527FC6' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M101 144c9 10 20 13 32 9' stroke='%23527FC6' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M57 211c9-26 22-46 42-61' stroke='%23527FC6' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+.cranio-art::after {
+    inset: 72px;
+    border-color: rgba(137, 111, 92, 0.14);
+}
+
+/* Porodní asistence — ochranný oblouk */
+.birth-art::before {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 170px;
+    border: 2px solid rgba(137, 111, 92, 0.24);
+    border-radius: 80px 80px 50px 50px;
+    left: 50%;
+    top: 28px;
+    transform: translateX(-50%);
+}
+
+.birth-art::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgba(137, 111, 92, 0.16);
+    border-radius: 50%;
+    left: 50%;
+    top: 86px;
+    transform: translateX(-50%);
+}
+
+/* Práce s jizvami — jemná organická linie */
+.scar-art::before {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 90px;
+    left: 50%;
+    top: 62px;
+    transform: translateX(-50%) rotate(-8deg);
+    border-top: 2px solid rgba(137, 111, 92, 0.26);
+    border-radius: 50%;
+}
+
+.scar-art::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 2px;
+    left: 50%;
+    top: 130px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(137, 111, 92, 0.22),
+        transparent
+    );
 }
 
 .kontakt {
